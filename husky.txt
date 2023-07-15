@@ -9,5 +9,3 @@ npx husky install  //해당 프로젝트 기초 세팅
 
 npx husky add .husky/pre-commit 'npm run lint' 
 npx husky add .husky/pre-push 'npm run format' 
-
-//
