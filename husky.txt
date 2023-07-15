@@ -1,0 +1,13 @@
+husky
+
+git 올리기 전 lint, format 자동화 설정
+
+npm i -D husky
+npx husky install  //해당 프로젝트 기초 세팅
+
+"postinstall": "husky install"   (package.json의 script)
+
+npx husky add .husky/pre-commit 'npm run lint' 
+npx husky add .husky/pre-push 'npm run format' 
+
+//
