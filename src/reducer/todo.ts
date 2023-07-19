@@ -1,6 +1,6 @@
 const initialState = [
-  { id: 1, data: "리액트 공부하기" },
-  { id: 2, data: "밥 먹기" },
+  { id: 1, content: "리액트 공부하기" },
+  { id: 2, content: "밥 먹기" },
 ];
 
 export const ADD_LIST = "ADD_LIST";

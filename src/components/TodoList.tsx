@@ -1,9 +1,15 @@
-import { useCallback } from "react";
+import { useCallback, FC } from "react";
 import { Button } from "./TodoForm";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { REMOVE_LIST } from "../reducer/todo";
-const TodoList = ({ state }) => {
+import { Todo } from "../types/todo.types";
+
+type TodoListProps = {
+  state: Todo[];
+};
+
+const TodoList: FC<TodoListProps> = ({ state }) => {
   const dispatch = useDispatch();
   const onRemoveList = useCallback(() => {
     dispatch({

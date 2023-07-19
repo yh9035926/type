@@ -1,10 +1,15 @@
 import styled, { keyframes } from "styled-components";
+import { Todo } from "../types/todo.types";
+import { FC } from "react";
+type TodoTitleProps = {
+  state: Todo;
+};
 
-const TodoTitle = ({ state }) => {
+const TodoTitle: FC<TodoTitleProps> = ({ state }) => {
   return (
     <>
       <Title>
-        할 일 목록 리스트{" "}
+        할 일 목록 리스트
         <span style={{ color: "red", background: "yellowgreen" }}>{state.length}</span>개
       </Title>
     </>

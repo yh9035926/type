@@ -3,8 +3,14 @@ import TodoTitle from "../components/TodoTitle";
 import TodoList from "../components/TodoList";
 import styled, { createGlobalStyle } from "styled-components";
 import { useSelector } from "react-redux";
+import { FC } from "react";
+import { Todo } from "../types/todo.types";
 
-const Todo = () => {
+type TodoProps = {
+  state: Todo;
+};
+
+const Todo: FC<TodoProps> = (): JSX.Element => {
   const state = useSelector((state) => state.todo);
 
   return (
@@ -14,8 +20,8 @@ const Todo = () => {
         <div>
           <TodoTitle state={state} />
           <TodoForm />
-          {state.map((v) => (
-            <TodoList key={v.id} state={v} />
+          {state.map((state) => (
+            <TodoList key={state.id} state={state} />
           ))}
         </div>
       </Wrapper>
